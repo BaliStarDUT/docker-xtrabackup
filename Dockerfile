@@ -1,4 +1,4 @@
-FROM ghcr.io/balistardut/debian:stretch
+FROM debian:stretch
 
 COPY percona-xtrabackup-80_8.0.25-17-1.stretch_amd64.deb /tmp/percona-xtrabackup.deb
 RUN apt-get update && apt-get -y install curl lsb-release \
