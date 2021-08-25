@@ -1,6 +1,6 @@
-FROM debian:stretch
+FROM ghcr.io/balistardut/debian:stretch
 
-COPY percona-xtrabackup-24_2.4.9-1.stretch_amd64.deb /tmp/percona-xtrabackup.deb
+COPY percona-xtrabackup-80_8.0.25-17-1.stretch_amd64.deb /tmp/percona-xtrabackup.deb
 RUN apt-get update && apt-get -y install curl lsb-release \
 	libdbd-mysql-perl rsync libaio1 libev4 libnuma1\
 	&& dpkg -i /tmp/percona-xtrabackup.deb && rm -Rf /tmp/percona-xtrabackup.deb \
